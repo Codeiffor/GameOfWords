@@ -6,9 +6,9 @@
   outline:none;
 }
 .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .btn-outline-secondary:not(:disabled):not(.disabled):active:focus{
- box-shadow: none;!important; 
+ box-shadow: none !important; 
 }
 .progress .progress-bar{
-  transition:width 0s ;!important
-  transition-timing-function:cubic-bezier(0,.95,0,.95);!important
+  transition:width 0s !important;
+  transition-timing-function:cubic-bezier(0,.95,0,.95) !important;
 }
