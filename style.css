@@ -1,0 +1,10 @@
+#word{
+  margin-bottom: 0;
+  font-family: 'Cinzel', serif;
+}
+#answer{
+  outline:none;
+}
+.btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .btn-outline-secondary:not(:disabled):not(.disabled):active:focus{
+ box-shadow: none;!important; 
+}
