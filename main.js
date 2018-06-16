@@ -29,6 +29,8 @@ word.innerHTML="select difficulty";
 function easy_mode(event){
   clearInterval(interval1);
   clearInterval(interval2);
+  progressHTMl.innerHTML=progressHTMLvalue;
+  timeline=document.querySelector(".progress-bar");
   medium.classList.toggle('active',false);
   hard.classList.toggle('active',false);
   easy.classList.toggle('active',true);
@@ -41,6 +43,8 @@ function easy_mode(event){
 function medium_mode(event){
   clearInterval(interval1);
   clearInterval(interval2);
+  progressHTMl.innerHTML=progressHTMLvalue;
+  timeline=document.querySelector(".progress-bar");
   easy.classList.toggle('active',false);
   hard.classList.toggle('active',false);
   medium.classList.toggle('active',true);
@@ -53,6 +57,8 @@ function medium_mode(event){
 function hard_mode(event){
   clearInterval(interval1);
   clearInterval(interval2);
+  progressHTMl.innerHTML=progressHTMLvalue;
+  timeline=document.querySelector(".progress-bar");
   easy.classList.toggle('active',false);
   medium.classList.toggle('active',false);
   hard.classList.toggle('active',true);
@@ -90,7 +96,7 @@ function gameStart(){
     if(perc==100){
       progressHTMl.innerHTML=progressHTMLvalue;
       timeline=document.querySelector(".progress-bar");
-      if(answer.value!=word.innerHTML){
+      if(answer.value.toLowerCase()!=word.innerHTML){
         clearInterval(interval2);
         gameEnd();
         return;
