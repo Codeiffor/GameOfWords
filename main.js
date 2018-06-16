@@ -87,7 +87,7 @@ function countdown(){
 
 function gameStart(){
   finalScore=0;
-  word.innerHTML=array[Math.floor((Math.random()*array.length))];
+  word.innerHTML=(array[Math.floor((Math.random()*array.length))]).toLowerCase();
   var perc=0;
   interval2=setInterval(count,40);
   function count(){
@@ -96,21 +96,23 @@ function gameStart(){
     if(perc==100){
       progressHTMl.innerHTML=progressHTMLvalue;
       timeline=document.querySelector(".progress-bar");
-      if(answer.value.toLowerCase()!=word.innerHTML){
+      if(answer.value.toLowerCase()!=(word.innerHTML).toLowerCase()){
         clearInterval(interval2);
         gameEnd();
         return;
       }
       finalScore++;
       score.innerHTML=finalScore;
-      word.innerHTML=array[Math.floor((Math.random()*array.length))];
+      word.innerHTML=(array[Math.floor((Math.random()*array.length))]).toLowerCase();
       answer.value="";
       perc=0;
     }
+    return;
   }
+  return;
 }
 function gameEnd(){
-  word.innerHTML="try again"
+  word.innerHTML="try again";
   answer.value="";
-  window.getSelection().removeAllRanges();
+  window.getSelection().empty();
 }
