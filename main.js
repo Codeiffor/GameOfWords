@@ -93,7 +93,7 @@ function gameStart(){
   function count(){
     perc+=2
     timeline.style.width=perc+"%";
-    if(perc==100){
+    if(perc==102){
       progressHTMl.innerHTML=progressHTMLvalue;
       timeline=document.querySelector(".progress-bar");
       if(answer.value.toLowerCase()!=(word.innerHTML).toLowerCase()){
