@@ -89,9 +89,9 @@ function gameStart(){
   finalScore=0;
   word.innerHTML=(array[Math.floor((Math.random()*array.length))]).toLowerCase();
   var perc=0;
-  interval2=setInterval(count,40);
+  interval2=setInterval(count,20);
   function count(){
-    perc+=2
+    perc+=1
     timeline.style.width=perc+"%";
     if(perc==102){
       progressHTMl.innerHTML=progressHTMLvalue;
@@ -105,6 +105,8 @@ function gameStart(){
       score.innerHTML=finalScore;
       word.innerHTML=(array[Math.floor((Math.random()*array.length))]).toLowerCase();
       answer.value="";
+      progressHTMl.innerHTML=progressHTMLvalue;
+      timeline=document.querySelector(".progress-bar");
       perc=0;
     }
     return;
